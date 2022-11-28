@@ -1,17 +1,19 @@
-Importing Modules
+#  Working Google colab link : https://colab.research.google.com/drive/1IIfmx_8Xu0Doy97ubb3fyzDDxoM5JnLM?usp=sharing
+
+# Importing Modules
 
 # Importing modules
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
-Loading Data
+# Loading Data
 
 
 # Importing inbuilt dataset from fashion_mnist
 fashion_mnist = tf.keras.datasets.fashion_mnist
 
-Separating Data
+# Separating Data
 
 
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
@@ -21,7 +23,7 @@ Defining Classes or variety
 
 class_name = ['T-shirt/top', 'Trouser', 'Pullover','Dress','Coat','Sandal','Shirt','Sneaker','Bag', 'Ankle boot']
 
-Visualizing Data
+# Visualizing Data
 
 train_images.shape
 
@@ -47,7 +49,7 @@ for i in range(25):
 
 plt.show()
 
-Creating Model NN
+# Creating Model NN
 
 model = tf.keras.Sequential([
     tf.keras.layers.Flatten(input_shape=(28,28)),
@@ -61,7 +63,7 @@ model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 
-Training Model
+# Training Model
 
 model.fit(train_images, train_labels, epochs=15)
 
