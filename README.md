@@ -1,3 +1,4 @@
 # Machine_learning_with_python
 
-All the machine learning model which I learn and work with are here.
+Machine learning is a complex field without practising you can't learn it.
+I put all my projects and machine learning models here.
